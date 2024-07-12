@@ -52,7 +52,7 @@ const OrderIndex = () => {
         onClick={() => openExportModal()}
       >
         <ExportIcon size={20} />
-        Export Orders
+        {t("orders-export-orders", "Export Orders")}
       </Button>,
     ]
   }, [view])
@@ -88,7 +88,7 @@ const OrderIndex = () => {
 
   return (
     <>
-      <div className="gap-y-xsmall flex h-full grow flex-col">
+      <div className="flex flex-col h-full gap-y-xsmall grow">
         {getWidgets("order.list.before").map((w, i) => {
           return (
             <WidgetContainer
@@ -99,7 +99,7 @@ const OrderIndex = () => {
             />
           )
         })}
-        <div className="flex w-full grow flex-col">
+        <div className="flex flex-col w-full grow">
           <BodyCard
             customHeader={
               <TableViewHeader
